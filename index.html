@@ -1,125 +1,444 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sappa Tarun Kumar Swamy · Full-stack developer</title>
+  <meta name="description" content="Portfolio of Sappa Tarun Kumar Swamy, a full-stack developer and B.Tech AI &amp; ML student building React web apps, Python services and AI-powered tools.">
+  <meta name="author" content="Sappa Tarun Kumar Swamy">
+  <meta name="theme-color" content="#101209">
+  <link rel="canonical" href="https://tarunkumarswamy.netlify.app/">
 
-    <script src="script.js"></script>
-  <link rel="stylesheet" crossorigin href="assets/index-CFImxbBv.css">
-  <style>
-  body{
-    background-color:#101209;
-    }
-  </style>
+  <!-- Link previews (WhatsApp, LinkedIn, X, Slack …) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tarunkumarswamy.netlify.app/">
+  <meta property="og:title" content="Sappa Tarun Kumar Swamy · Full-stack developer">
+  <meta property="og:description" content="Full-stack developer and B.Tech AI &amp; ML student building React web apps, Python services and AI-powered tools.">
+  <meta property="og:image" content="https://tarunkumarswamy.netlify.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Josefin+Sans:wght@300..700&family=Montez&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="projects.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="star fixed"></div>
-    <div class="triangle md:h-96 md:w-96 h-64 w-64 sm:h-72 sm:w-72 fixed"></div>
-    <section id="home-1">
-        <div class="navbar flex lg:justify-around items-center fixed w-11/12 top-4 py-2 flex-col lg:flex-row md:gap-2 gap-2">
-            <div class="logo flex items-center gap-1">
-                <img class="invert h-6 lg:h-12 md:h-8" src="assets/logo-DS3-KRmc.png" alt="image" srcset="">
-                <p class="text-white josefin-sans lg:text-2xl md:text-xl">Tarunkumarswamy</p>
+  <a href="#main" class="btn btn-primary sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60]">Skip to content</a>
+
+  <!-- Background decoration -->
+  <div class="star -z-10" aria-hidden="true"></div>
+  <div class="triangle -z-10 size-64 sm:size-72 md:size-96" aria-hidden="true"></div>
+
+  <!-- ============================ Header ============================ -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300 data-scrolled:border-white/10 data-scrolled:bg-ink/75 data-scrolled:backdrop-blur-md">
+    <nav class="container-page flex h-16 items-center justify-between gap-6" aria-label="Main">
+      <a href="#home" class="flex items-center gap-2.5 text-white">
+        <img src="assets/logo.png" alt="" width="28" height="28" class="size-7 invert">
+        <span class="pt-1 text-lg font-semibold tracking-wide">Tarunkumarswamy</span>
+      </a>
+
+      <ul class="hidden items-center gap-8 lg:flex">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="assets/Tarun_Sappa_Resume.pdf" class="btn btn-outline btn-sm hidden sm:inline-flex" download>
+          Résumé
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        </a>
+        <button id="menu-toggle" type="button" class="icon-btn group lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg class="size-5 group-aria-expanded:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="hidden size-5 group-aria-expanded:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="border-t border-white/10 bg-ink/85 lg:hidden" hidden>
+      <ul class="container-page flex flex-col py-3">
+        <li><a class="block py-3 text-lg text-white/80 hover:text-white" href="#about">About</a></li>
+        <li><a class="block py-3 text-lg text-white/80 hover:text-white" href="#skills">Skills</a></li>
+        <li><a class="block py-3 text-lg text-white/80 hover:text-white" href="#experience">Experience</a></li>
+        <li><a class="block py-3 text-lg text-white/80 hover:text-white" href="#projects">Projects</a></li>
+        <li><a class="block py-3 text-lg text-white/80 hover:text-white" href="#contact">Contact</a></li>
+        <li class="pt-3 pb-2 sm:hidden"><a class="btn btn-primary w-full" href="assets/Tarun_Sappa_Resume.pdf" download>Download résumé</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================ Hero ============================ -->
+    <section id="home" class="relative flex min-h-svh items-center pt-28 pb-24">
+      <div class="container-page flex flex-col items-center text-center">
+        <p class="eyebrow after:h-px after:w-8 after:bg-amber-200/60 after:content-['']">Full-stack developer</p>
+
+        <h1 class="mt-6 max-w-4xl bg-linear-to-r from-amber-100 via-white to-stone-400 bg-clip-text pb-2 font-display text-5xl leading-[1.05] text-balance text-transparent sm:text-7xl lg:text-8xl">
+          Sappa Tarun Kumar Swamy
+        </h1>
+
+        <p class="tagline mt-3 font-script text-4xl text-amber-100 sm:text-5xl lg:text-6xl">Deploying code &amp; unlocking dreams</p>
+
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
+          I build responsive React interfaces, Python back ends and AI-powered tools.
+          B.Tech student in Artificial Intelligence &amp; Machine Learning at JNTU-K, class of 2027.
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-3">
+          <a href="#projects" class="btn btn-primary">
+            View projects
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a href="assets/Tarun_Sappa_Resume.pdf" class="btn btn-outline" download>
+            Download résumé
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          </a>
+        </div>
+
+        <ul class="mt-8 flex items-center gap-3" aria-label="Find me online">
+          <li>
+            <a class="icon-btn" href="https://github.com/Tarun841" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="icon-btn" href="https://www.linkedin.com/in/tarun-sappa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="icon-btn" href="mailto:sappatarun88@gmail.com" aria-label="Email">
+              <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#about" class="animate-nudge absolute bottom-6 left-1/2 -translate-x-1/2 p-2 text-white/45 transition hover:text-white" aria-label="Scroll to About">
+        <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============================ About ============================ -->
+    <section id="about" class="section">
+      <div class="container-page">
+        <header class="section-head reveal">
+          <p class="eyebrow">Who I am</p>
+          <h2 class="section-title">About me</h2>
+        </header>
+
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16">
+          <div class="reveal space-y-5 text-lg leading-relaxed text-white/75">
+            <p>
+              Hi! I'm Tarun, a <strong class="font-semibold text-white">full-stack developer</strong> and a B.Tech student in
+              Artificial Intelligence &amp; Machine Learning at JNTU-K. I like turning ideas into clean, responsive
+              products, from React interfaces to Python back ends and AI-powered tools.
+            </p>
+            <p>
+              My programming foundations are in C, Java and Python, with SQL for working with data. On the web I build
+              with HTML, CSS, JavaScript, Tailwind CSS and React, and on the server with Node.js, Express and REST APIs.
+              Lately I've been building with large language models, using retrieval-augmented generation (RAG), LangChain
+              and the Gemini API.
+            </p>
+            <p>
+              Two internships in 2026, one in software development and one in AI/ML, taught me how to ship as part of a
+              team: working from designs, collaborating through Git and pull requests, and measuring results.
+            </p>
+            <p>
+              I'm always eager to learn new technologies, take on challenges and contribute to meaningful projects that
+              make a difference.
+            </p>
+          </div>
+
+          <dl class="card reveal grid h-fit gap-7 p-6 sm:p-8">
+            <div class="flex gap-4">
+              <span class="icon-tile">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+              </span>
+              <div>
+                <dt class="text-xs font-semibold tracking-[0.2em] text-amber-200/80 uppercase">Education</dt>
+                <dd class="mt-1.5 text-white">B.Tech, AI &amp; ML · JNTU-K</dd>
+                <dd class="mt-0.5 text-sm text-white/60">2023 – 2027 · CGPA 7.7</dd>
+              </div>
             </div>
-            <div class="nav">
-                <ul class="flex gap-16">
-                    <li><a href="#home-1" class="text-white josefin-sans lg:text-2xl md:text-xl">Home</a></li>
-                    <li><a href="#about" class="text-white josefin-sans lg:text-2xl md:text-xl">About</a></li>
-                    <li><a href="#skills" class="text-white josefin-sans lg:text-2xl md:text-xl">Skills</a></li>
-                    <li><a href="#projects" class="text-white josefin-sans lg:text-2xl md:text-xl">Projects</a></li>
+            <div class="flex gap-4">
+              <span class="icon-tile">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+              </span>
+              <div>
+                <dt class="text-xs font-semibold tracking-[0.2em] text-amber-200/80 uppercase">Experience</dt>
+                <dd class="mt-1.5 text-white">2 internships</dd>
+                <dd class="mt-0.5 text-sm text-white/60">Software development &amp; AI/ML · 2026</dd>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="icon-tile">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+              </span>
+              <div>
+                <dt class="text-xs font-semibold tracking-[0.2em] text-amber-200/80 uppercase">Highlight</dt>
+                <dd class="mt-1.5 text-white">2nd prize, AI Hackathon</dd>
+                <dd class="mt-0.5 text-sm text-white/60">Atal Incubation Centre (ALEAP We-Hub)</dd>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="icon-tile">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/></svg>
+              </span>
+              <div>
+                <dt class="text-xs font-semibold tracking-[0.2em] text-amber-200/80 uppercase">Focus</dt>
+                <dd class="mt-1.5 text-white">Full-stack web &amp; AI apps</dd>
+                <dd class="mt-0.5 text-sm text-white/60">React · Python · LLMs</dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Skills ============================ -->
+    <section id="skills" class="section">
+      <div class="container-page">
+        <header class="section-head reveal">
+          <p class="eyebrow">What I work with</p>
+          <h2 class="section-title">Skills</h2>
+        </header>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="card card-hover reveal p-6 sm:p-7">
+            <div class="flex items-center gap-4">
+              <span class="icon-tile"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg></span>
+              <h3 class="pt-1 text-xl font-semibold text-white">Languages</h3>
+            </div>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="chip">Python</li><li class="chip">Java</li><li class="chip">JavaScript</li>
+              <li class="chip">C</li><li class="chip">Dart</li><li class="chip">SQL</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover reveal p-6 sm:p-7">
+            <div class="flex items-center gap-4">
+              <span class="icon-tile"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+              <h3 class="pt-1 text-xl font-semibold text-white">Frontend &amp; mobile</h3>
+            </div>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="chip">React</li><li class="chip">HTML</li><li class="chip">CSS</li>
+              <li class="chip">Tailwind CSS</li><li class="chip">Flutter</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover reveal p-6 sm:p-7">
+            <div class="flex items-center gap-4">
+              <span class="icon-tile"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+              <h3 class="pt-1 text-xl font-semibold text-white">Backend</h3>
+            </div>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="chip">Node.js</li><li class="chip">Express.js</li><li class="chip">REST APIs</li>
+              <li class="chip">JWT</li><li class="chip">Socket.IO</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover reveal p-6 sm:p-7">
+            <div class="flex items-center gap-4">
+              <span class="icon-tile"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></span>
+              <h3 class="pt-1 text-xl font-semibold text-white">Databases</h3>
+            </div>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="chip">PostgreSQL</li><li class="chip">MongoDB</li><li class="chip">SQLite</li>
+              <li class="chip">FAISS</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover reveal p-6 sm:p-7">
+            <div class="flex items-center gap-4">
+              <span class="icon-tile"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/></svg></span>
+              <h3 class="pt-1 text-xl font-semibold text-white">AI &amp; ML</h3>
+            </div>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="chip">Machine learning</li><li class="chip">LLM APIs</li><li class="chip">Prompt engineering</li>
+              <li class="chip">RAG</li><li class="chip">LangChain</li><li class="chip">Gemini AI</li>
+            </ul>
+          </article>
+
+          <article class="card card-hover reveal p-6 sm:p-7">
+            <div class="flex items-center gap-4">
+              <span class="icon-tile"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
+              <h3 class="pt-1 text-xl font-semibold text-white">Fundamentals &amp; tools</h3>
+            </div>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="chip">Git &amp; GitHub</li><li class="chip">Data structures &amp; algorithms</li><li class="chip">OOP</li>
+              <li class="chip">Operating systems</li><li class="chip">DBMS</li><li class="chip">Computer networks</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Experience ============================ -->
+    <section id="experience" class="section">
+      <div class="container-page">
+        <header class="section-head reveal">
+          <p class="eyebrow">Where I've worked</p>
+          <h2 class="section-title">Experience</h2>
+        </header>
+
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16">
+          <ol class="space-y-6 border-l border-white/10 pl-6 sm:pl-8">
+            <li class="reveal relative">
+              <span class="absolute top-8 -left-[29.5px] size-2.5 rounded-full bg-amber-200 ring-4 ring-amber-200/15 sm:-left-[37.5px]" aria-hidden="true"></span>
+              <article class="card card-hover p-6 sm:p-7">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-xl font-semibold text-white">Software Development Intern</h3>
+                  <p class="text-sm text-white/55"><time datetime="2026-05">May</time> – <time datetime="2026-07">Jul 2026</time></p>
+                </div>
+                <p class="mt-1 text-amber-100/90">VijnananAI Technologies</p>
+                <ul class="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-white/70 marker:text-amber-200/70">
+                  <li>Built responsive web interfaces from Figma designs in React, keeping layouts consistent across screen sizes.</li>
+                  <li>Developed mobile app interfaces in React Native for student-facing workflows.</li>
+                  <li>Created 5 RESTful APIs with Python and FastAPI that cut data-retrieval time by 20%.</li>
+                  <li>Collaborated through Git, pull requests and ClickUp on features, debugging and UI improvements.</li>
                 </ul>
+              </article>
+            </li>
+
+            <li class="reveal relative">
+              <span class="absolute top-8 -left-[29.5px] size-2.5 rounded-full bg-amber-200 ring-4 ring-amber-200/15 sm:-left-[37.5px]" aria-hidden="true"></span>
+              <article class="card card-hover p-6 sm:p-7">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-xl font-semibold text-white">AI/ML Intern</h3>
+                  <p class="text-sm text-white/55"><time datetime="2026-06">Jun</time> – <time datetime="2026-08">Aug 2026</time></p>
+                </div>
+                <p class="mt-1 text-amber-100/90">SmartBridge Educational Services</p>
+                <ul class="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-white/70 marker:text-amber-200/70">
+                  <li>Implemented three machine-learning models in Python, reaching 85% accuracy on validation data.</li>
+                  <li>Cleaned and transformed datasets of 10,000+ records, improving model performance by 15%.</li>
+                  <li>Worked through the full workflow: dataset preparation, model training and evaluation.</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+
+          <aside class="card reveal h-fit p-6 sm:p-8" aria-labelledby="achievements-title">
+            <div class="flex items-center gap-4">
+              <span class="icon-tile"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span>
+              <h3 id="achievements-title" class="pt-1 text-xl font-semibold text-white">Achievements</h3>
             </div>
+            <ul class="mt-6 space-y-5">
+              <li>
+                <p class="font-semibold text-white">2nd prize · AI Hackathon</p>
+                <p class="mt-1 leading-relaxed text-white/65">For Sigil, an AI-powered PDF editor, at the hackathon organised by Atal Incubation Centre (ALEAP We-Hub).</p>
+              </li>
+              <li>
+                <p class="font-semibold text-white">Generative AI certification</p>
+                <p class="mt-1 leading-relaxed text-white/65">Completed the “Building Your Own Generative AI” workshop.</p>
+              </li>
+              <li>
+                <p class="font-semibold text-white">Technical Official</p>
+                <p class="mt-1 leading-relaxed text-white/65">CBSE Yoga South Zone-I Championship, Kakinada · Aug 2025</p>
+              </li>
+              <li>
+                <p class="font-semibold text-white">Volunteer · Zeitgeist Fest 2025</p>
+                <p class="mt-1 leading-relaxed text-white/65">Gen AI course conducted by JNTUK.</p>
+              </li>
+            </ul>
+          </aside>
         </div>
-    <div id="home">   
-    <div class="title montez-regular sm:text-6xl md:text-7xl text-white z-1 lg:text-8xl text-5xl whitespace-normal md:w-7/12 lg:w-xl w-80 leading-16 sm:w-96 sm:leading-20 lg:leading-36"><p class="tagline">Deploying code & Unlocking Dreams</p></div>
+      </div>
+    </section>
+
+    <!-- ============================ Projects ============================ -->
+    <!-- Cards are generated from the list in projects.js -->
+    <section id="projects" class="section">
+      <div class="container-page">
+        <header class="section-head reveal">
+          <p class="eyebrow">Things I've built</p>
+          <h2 class="section-title">Projects</h2>
+        </header>
+
+        <ul id="featured-projects" class="grid gap-6 md:grid-cols-2" aria-label="Featured projects"></ul>
+
+        <h3 class="mt-16 mb-6 text-sm font-semibold tracking-[0.25em] text-white/60 uppercase">More projects</h3>
+        <ul id="more-projects" class="flex flex-wrap justify-center gap-6" aria-label="More projects"></ul>
+
+        <noscript>
+          <p class="card p-6 text-white/70">Turn on JavaScript to see the project cards, or browse my work on
+            <a class="text-amber-100 underline" href="https://github.com/Tarun841">GitHub</a>.</p>
+        </noscript>
+
+        <p class="mt-14 text-center">
+          <a class="btn btn-outline" href="https://github.com/Tarun841" target="_blank" rel="noopener noreferrer">
+            <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
+            More on GitHub
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ Contact ============================ -->
+    <section id="contact" class="section">
+      <div class="container-page">
+        <div class="card reveal relative overflow-hidden px-6 py-14 text-center sm:px-12 sm:py-20">
+          <div class="pointer-events-none absolute -top-24 left-1/2 h-48 w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-amber-200/10 blur-3xl" aria-hidden="true"></div>
+
+          <p class="eyebrow flex justify-center after:h-px after:w-8 after:bg-amber-200/60 after:content-['']">Say hello</p>
+          <h2 class="section-title mt-4 inline-block">Let's build something</h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+            Have an opportunity, a project or just a question? My inbox is always open, and I'll get back to you as soon as I can.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <a class="btn btn-primary" href="mailto:sappatarun88@gmail.com">
+              <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              sappatarun88@gmail.com
+            </a>
+            <button type="button" class="btn btn-outline" data-copy="sappatarun88@gmail.com">
+              <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              <span data-copy-label aria-live="polite">Copy email</span>
+            </button>
+          </div>
+
+          <ul class="mt-8 flex justify-center gap-3" aria-label="Other ways to reach me">
+            <li>
+              <a class="icon-btn" href="https://www.linkedin.com/in/tarun-sappa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-btn" href="https://github.com/Tarun841" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-btn" href="assets/Tarun_Sappa_Resume.pdf" download aria-label="Download résumé (PDF)">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/><path d="M12 11v6"/><path d="m9.5 14.5 2.5 2.5 2.5-2.5"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ Footer ============================ -->
+  <footer class="border-t border-white/10">
+    <div class="container-page flex flex-col items-center justify-between gap-3 pt-8 pb-20 text-sm text-white/55 sm:flex-row sm:pb-8">
+      <p>© <span id="year">2026</span> Sappa Tarun Kumar Swamy</p>
+      <p>Built with HTML, JavaScript &amp; Tailwind CSS</p>
     </div>
+  </footer>
 
-
-</section>
-    <section id="about">
-     <div class="tag-1">
-        <div class="sc lg:text-9xl md:text-9xl text-7xl gloock-regular">About me</div>
-        <div class="sc josefin-sans lg:text-3xl text-white md:text-2xl"><p>Sappa Tarun kumar swamy</p></div>
-        <div class="sc lg:text-xl text-white font-light md:text-lg text-[10px] sm:left-60">
-            <pre class="josefin-sans">I'm a <b>Full Stack Developer</b>I’m a passionate and driven tech enthusiast 
-with hands-on experience in both frontend and backend technologies. 
-My skill set includes strong programming foundations in C, Java, and Python, 
-complemented by practical knowledge in SQL for database management.
-
-On the web development side, I create responsive and user-friendly interfaces 
-using HTML, CSS, JavaScript, and Tailwind CSS. 
-I enjoy building clean, modern UIs and solving real-world problems through code.
-
-I’m always eager to learn new technologies, 
-take on challenges, and contribute to meaningful projects that make a difference.
-            </pre>
-     </div>
-    </div>
-    </section>
-
-    <section id="skills">
-        <div class="tag-1 gap-5">
-            <div class="sc lg:text-9xl md:text-9xl text-7xl gloock-regular">Skills</div>
-            <div class="sc skill grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-5 ">
-                <div class="p-[2px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">C</div>
-                </div>
-                <div class="p-[1px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">PYTHON</div>
-                </div>
-                <div class="p-[2px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">JAVA</div>
-                </div>
-                <div class="p-[2px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">SQL</div>
-                </div>
-                <div class="p-[2px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">HTML</div>
-                </div>
-                <div class="p-[2px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">CSS</div>
-                </div>
-                <div class="p-[2px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">JAVASCRIPT</div>
-                </div>
-                <div class="p-[2px] rounded-xl bg-gradient-to-r from-yellow-200 via-white to-gray-400">
-                    <div class="bg-black rounded-xl text-white p-2 flex justify-center">TAILWIND CSS</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="projects">
-        <div class="tag-1 gap-5">
-            <div class="sc lg:text-9xl md:text-9xl text-7xl gloock-regular">Projects</div>
-            <div class="sc project lg:gap-3 justify-center flex flex-wrap items-center">
-                <div class="card items-center flex flex-col">
-                   <a href="https://tarun841.github.io/netflix/"> <img src="https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940" alt="Project Image" class="lg:w-full lg:h-48 sm:h-28 h-28 w-48 object-cover rounded-t-lg"></a>
-                    <div class="p-4 w-96 items-center flex flex-col">
-                        <h3 class="text-xl font-semibold">Netflix-clone</h3>
-                        <p class="text-amber-100">A static Netflix homepage clone using HTML and CSS, showcasing layout design, styling, and structure for desktop view only.</p>
-                    </div>
-                </div>
-                <div class="card items-center flex flex-col">
-                    <a href="https://responsive42.netlify.app/"><img src="https://www.logodesignlove.com/wp-content/uploads/2012/08/microsoft-logo-02.jpeg" alt="Project Image" class="lg:w-full lg:h-48 sm:h-28 h-28 w-48 object-cover rounded-t-lg "></a>
-                    <div class="p-4 w-96 items-center flex flex-col">
-                        <h3 class="text-xl font-semibold">Microsoft-clone</h3>
-                        <p class="text-amber-100">Responsive Microsoft homepage clone built with HTML and Tailwind CSS, featuring modern layout, utility-first styling, and optimized design for all screens.</p>
-                    </div>
-                </div>
-                <div class="card items-center flex flex-col">
-                    <a href="https://memorygame42.netlify.app/"><img src="https://slidechef.net/wp-content/uploads/2024/08/memory-game-template.jpg" alt="Project Image" class="lg:w-full lg:h-48  sm:h-28 h-28 w-48 object-cover rounded-t-lg "></a>
-                    <div class="p-4 w-96 items-center flex flex-col">
-                        <h3 class="text-xl font-semibold">Memory-game</h3>
-                        <p class="text-amber-100">Interactive memory game built with HTML, CSS, and JavaScript featuring card flipping, match logic, scoring, and basic animations for engagement.</p>
-                    </div>
-                </div>
-        </div>
-    </section>
+  <a href="#home" id="back-to-top" class="icon-btn pointer-events-none fixed right-4 bottom-4 z-40 translate-y-3 bg-ink/80 opacity-0 backdrop-blur data-visible:pointer-events-auto data-visible:translate-y-0 data-visible:opacity-100 sm:right-6 sm:bottom-6" aria-label="Back to top">
+    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+  </a>
 </body>
 </html>
